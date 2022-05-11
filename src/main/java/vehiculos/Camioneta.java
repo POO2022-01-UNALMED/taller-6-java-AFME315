@@ -5,7 +5,7 @@ public class Camioneta extends Vehiculo {
 	private static int cantCamioneta;
 	
 	public Camioneta(String pl,int p,int vel,String nom,int pre,int pes,String tra,Fabricante fa,boolean volco) {
-		super(pl,p,vel=90,nom,pre,pes,tra="4X4",fa);
+		super(pl,p,90,nom,pre,pes,"4X4",fa);
 		this.volco=volco;
 		cantCamioneta++;
 	}
