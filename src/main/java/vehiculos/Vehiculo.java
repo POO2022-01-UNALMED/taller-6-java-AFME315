@@ -85,11 +85,11 @@ public class Vehiculo {
 		cantidadVehiculos=cant;
 	}
 	
-	public static String vehiculosPortipo() {
+	public static String vehiculosPorTipo() {
 		return 
-				"Automoviles: " + Automovil.getCantAutomovil()+ "\n" +
-				"Camionetas: " + Camioneta.getCantCamioneta()+ "\n" + 
-				"Caminones: " + Camion.getCantCamion();
+				"Automoviles: " + Automovil.getCantAutomovil() + "\n" + 
+				"Camionetas: " + Camioneta.getCantCamioneta() + "\n" + 
+				"Camiones: " + Camion.getCantCamion();
 	}
 	
 }
