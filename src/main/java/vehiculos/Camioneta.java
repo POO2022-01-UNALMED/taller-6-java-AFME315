@@ -4,8 +4,8 @@ public class Camioneta extends Vehiculo {
 	private boolean volco;
 	private static int cantCamioneta;
 	
-	public Camioneta(String pl, int p, String nom, int pre, int pes,Fabricante fa, boolean volco) {
-		super(pl,p,90,nom,pre,pes,"4X4",fa);
+	public Camioneta(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante, boolean volco) {
+		super(placa,puertas,90,nombre,precio,peso,"4X4",fabricante);
 		this.volco=volco;
 		Camioneta.cantCamioneta+=1;
 	}

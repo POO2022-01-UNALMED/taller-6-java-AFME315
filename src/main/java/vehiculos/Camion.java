@@ -4,8 +4,8 @@ public class Camion extends Vehiculo{
 	private int ejes;
 	private static int cantCamion;
 	
-	public Camion(String pl, String nom, int pre, int pes, Fabricante fa,int ejes) {
-		super(pl,2,80,nom,pre,pes,"4X2",fa);
+	public Camion(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante, int ejes) {
+		super(placa,2,80,nombre,precio,peso,"4X2",fabricante);
 		this.ejes=ejes;
 		Camion.cantCamion+=1;
 	}

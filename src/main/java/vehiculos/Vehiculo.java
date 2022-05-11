@@ -14,15 +14,15 @@ public class Vehiculo {
 
 	
 	
-	public Vehiculo(String pl,int p,int vel,String nom,int pre,int pes,String tra,Fabricante fa ){
-		placa=pl;
-		puertas=p;
-		velocidadMaxima=vel;
-		nombre=nom;
-		precio=pre;
-		peso=pes;
-		traccion=tra;
-		fabricante=fa;
+	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {
+		this.placa = placa;
+		this.puertas = puertas;
+		this.velocidadMaxima = velocidadMaxima;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.peso = peso;
+		this.traccion = traccion;
+		this.fabricante = fabricante;
 		Vehiculo.cantidadVehiculos+=1;
 		fabricante.getPais().unidadesVendidas+=1;
 		fabricante.unidadesVendidas+=1;
@@ -53,7 +53,7 @@ public class Vehiculo {
 	public Fabricante getFabricante() {
 		return fabricante;
 	}
-	public static int getCantidadVehiculos() {
+	public int getCantidadVehiculos() {
 		return cantidadVehiculos;
 	}
 	
@@ -81,14 +81,14 @@ public class Vehiculo {
 	public void setFabricante(Fabricante fabricante) {
 		this.fabricante=fabricante;
 	}
-	public static void setCantidadVehiculos(int cant) {
+	public void setCantidadVehiculos(int cant) {
 		cantidadVehiculos=cant;
 	}
 	
 	public static String vehiculosPortipo() {
 		return 
-				"Automoviles: " + Automovil.getCantAutomovil()+ "/n" +
-				"Camionetas: " + Camioneta.getCantCamioneta()+ "/n" + 
+				"Automoviles: " + Automovil.getCantAutomovil()+ "\n" +
+				"Camionetas: " + Camioneta.getCantCamioneta()+ "\n" + 
 				"Caminones: " + Camion.getCantCamion();
 	}
 	

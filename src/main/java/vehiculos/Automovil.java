@@ -4,9 +4,8 @@ public class Automovil extends Vehiculo  {
 	private int puestos;
 	private static int cantAutomovil;
 	
-	public Automovil(String pl, int p, String nom, int pre, int pes,
-			Fabricante fa, boolean volco) {
-		super(pl,4,100,nom,pre,pes,"FWD",fa);
+	public Automovil(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante,int puestos) {
+		super(placa,4,100,nombre,precio,peso,"FWD",fabricante);
 		this.puestos=puestos;
 		Automovil.cantAutomovil+=1;
 		
