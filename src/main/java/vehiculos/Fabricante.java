@@ -1,41 +1,36 @@
 package vehiculos;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Fabricante {
-	private Pais pais;
 	private String nombre;
+	private Pais pais;
+	private static ArrayList<Fabricante> fabricasCreadas= new ArrayList<Fabricante>();
 	public int unidadesVendidas;
-	private static ArrayList<Fabricante> fabricas = new ArrayList<Fabricante>();
-	
-	public Fabricante (String nombre, Pais pais) {
-		this.nombre=nombre;
-		this.pais=pais;
-		fabricas.add(this);
-	}
-	
-	public Pais getPais() {
-		return pais;
+	public Fabricante(String nombre, Pais pais) {
+		this.nombre = nombre;
+		this.pais = pais;
+		fabricasCreadas.add(this);
 	}
 	public String getNombre() {
 		return nombre;
 	}
-	
-	public void setPais(Pais pais) {
-		this.pais=pais;
-	}
 	public void setNombre(String nombre) {
-		this.nombre=nombre;
+		this.nombre = nombre;
 	}
-	
+	public Pais getPais() {
+		return pais;
+	}
+	public void setPais(Pais pais) {
+		this.pais = pais;
+	}
 	public static Fabricante fabricaMayorVentas() {
-		Fabricante masVendidos =new Fabricante("LLantas_Colombia_SAS", new Pais("Colombia"));
-		
-		for (Fabricante f: fabricas) {
-			if (f.unidadesVendidas>masVendidos.unidadesVendidas) {
-				masVendidos=f;
-			}
-		}
-		return masVendidos;
-	}
+    	Fabricante masVendedor=new Fabricante("LLantas_ColombiaSAS", new Pais("Colombia"));
+    	for(Fabricante p: fabricasCreadas) {
+    		if (p.unidadesVendidas>masVendedor.unidadesVendidas) {
+    			masVendedor=p;
+    		}
+    	}
+    	return masVendedor;
+    }
 }
