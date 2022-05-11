@@ -23,7 +23,7 @@ public class Vehiculo {
 		peso=pes;
 		traccion=tra;
 		fabricante=fa;
-		cantidadVehiculos++;
+		Vehiculo.cantidadVehiculos+=1;
 		fabricante.getPais().unidadesVendidas+=1;
 		fabricante.unidadesVendidas+=1;
 		

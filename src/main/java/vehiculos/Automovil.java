@@ -7,7 +7,7 @@ public class Automovil extends Vehiculo  {
 	public Automovil(String pl,int p,int vel,String nom,int pre,int pes,String tra,Fabricante fa,int puestos ) {
 		super(pl,4,100,nom,pre,pes,"FWD",fa);
 		this.puestos=puestos;
-		cantAutomovil++;
+		Automovil.cantAutomovil+=1;
 		
 	}
 	public int getPuestos(){
